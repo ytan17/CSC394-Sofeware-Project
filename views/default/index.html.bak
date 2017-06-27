@@ -1,0 +1,34 @@
+{{extend 'layout.html'}}
+
+<div class="container-fluid">
+   <div class="row">
+	<img src="https://www.depaul.edu/PublishingImages/homepage-splash/nationallyJan.png" class="img-responsive">
+   </div>
+    <div class="row">
+        <h1>When If</h1>
+
+<h5>
+    What-If Degree Progress Report
+</h5>
+
+<p>
+    If you are thinking about changing your major or adding a major or minor, first run a What-If Degree Progress Report to see how this change might impact your time to graduation.
+</p>
+
+<p>
+    Please note that previously approved substitutions may need to be reevaluated after you officially change your major. Be sure to consult with an advisor about the change.
+</p>
+
+<p>
+    Change College, Major or Minor
+</p>
+
+<p>
+    To officially change your college, major, minor and/or concentration use the Declarations and Inter-College Transfer Tool. To use the tool you must be a current, degree-seeking undergraduate student and have never applied for degree conferral/graduation.</p>
+
+<p>
+    View the What-If and Change College, Major or Minor video
+</p>
+
+    </div>
+</div>

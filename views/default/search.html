@@ -1,0 +1,122 @@
+{{extend 'layout.html'}}
+<form class="form-horizontal" action="result">
+<fieldset>
+
+<legend>WhenIf</legend>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="degree">Degrees Selection</label>
+  <div class="col-md-4">
+    <select id="degree" name="degree" class="form-control">
+      <option value="Computer Science">Masters in Computer Science</option>
+      <option value="Information Security">Masters in Information Security</option>
+    </select>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="concentration">Concentration</label>
+  <div class="col-md-4">
+    <select id="concentration" name="concentration" class="form-control">
+      <option value="Standard Concentration">Standard Concentration</option>
+    </select>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="quarter">Starting Quarter</label>
+  <div class="col-md-4">
+    <select id="quarter" name="quarter" class="form-control">
+      <option value="Fall">Fall</option>
+      <option value="Winter">Winter</option>
+      <option value="Spring">Spring</option>
+      <option value="Summer">Summer</option>
+    </select>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="courses">Number of Courses Per/Quarter</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="courses-0">
+      <input type="radio" name="courses" id="courses-0" value="1" checked="checked">
+      1
+    </label> 
+    <label class="radio-inline" for="courses-1">
+      <input type="radio" name="courses" id="courses-1" value="2">
+      2
+    </label> 
+    <label class="radio-inline" for="courses-2">
+      <input type="radio" name="courses" id="courses-2" value="3">
+      3
+    </label> 
+    <label class="radio-inline" for="courses-3">
+      <input type="radio" name="courses" id="courses-3" value="4">
+      4
+    </label>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="delivery">Course Delivery</label>
+  <div class="col-md-4">
+  <div class="checkbox">
+    <label for="delivery-0">
+      <input type="checkbox" name="delivery" id="delivery-0" value="Classroom">
+      Classroom
+    </label>
+	</div>
+  <div class="checkbox">
+    <label for="delivery-1">
+      <input type="checkbox" name="delivery" id="delivery-1" value="Online">
+      Online
+    </label>
+	</div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="search"></label>
+  <div class="col-md-4">
+    <button id="search" class="btn btn-primary">Search</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+<script>
+    $( "#degree" ).change(function(value) {
+      var current = $( "#degree" ).val();
+        $('#concentration').empty();
+      if (current == "Computer Science"){
+          $('#concentration').append($('<option>', {
+            value: 'Standard Concentration',
+            text: 'Standard Concentration'
+          }));
+      }else{
+          $('#concentration').append($('<option>', {
+            value: 'Standard Concentration',
+            text: 'Standard Concentration'
+          }));
+          $('#concentration').append($('<option>', {
+            value: 'Business Analysis/Systems Analysis Concentration',
+            text: 'Business Analysis/Systems Analysis Concentration'
+          }));
+          $('#concentration').append($('<option>', {
+            value: 'Business Intelligence Concentration',
+            text: 'Business Intelligence Concentration'
+          }));
+          $('#concentration').append($('<option>', {
+            value: 'Database Administration Concentration',
+            text: 'Database Administration Concentration'
+          }));
+          $('#concentration').append($('<option>', {
+            value: 'IT Enterprise Management Concentration',
+            text: 'IT Enterprise Management Concentration'
+          }));
+      }
+    });
+</script>
+
+{{=BEAUTIFY(response._vars)}}
